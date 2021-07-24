@@ -1,4 +1,5 @@
 import React from 'react';
+import PropType from 'prop-types';
 import styled from '@emotion/styled';
 
 const Title = styled.h1`
@@ -11,3 +12,8 @@ const Section = ({title, children}) => (
     </section>
 )
 export default Section;
+
+Title.propTypes = {
+    title: PropType.string.isRequired,
+}
+

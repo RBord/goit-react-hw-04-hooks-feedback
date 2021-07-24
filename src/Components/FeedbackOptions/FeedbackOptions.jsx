@@ -1,4 +1,5 @@
 import React from 'react';
+import PropType from 'prop-types';
 import Section from '../Section/Section';
 import styled from '@emotion/styled';
 
@@ -23,3 +24,9 @@ const FeedbackOptions = ({incrementGood, incrementNeutral, incrementBad }) => (
     </>
 )
 export default FeedbackOptions;
+
+FeedbackOptions.propTypes = {
+    incrementGood: PropType.func.isRequired,
+    incrementNeutral: PropType.func.isRequired,
+    incrementBad: PropType.func.isRequired,
+}

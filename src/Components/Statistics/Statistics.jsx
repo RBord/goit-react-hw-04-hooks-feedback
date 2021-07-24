@@ -1,4 +1,5 @@
 import React from "react";
+import PropType from 'prop-types';
 import styled from "@emotion/styled";
 import Section from "../Section/Section";
 import { Container } from "../FeedbackOptions/FeedbackOptions";
@@ -30,3 +31,11 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
 )
     
 export default Statistics;
+
+Statistics.propTypes = {
+    good: PropType.number.isRequired,
+    bad: PropType.number.isRequired,
+    neutral: PropType.number.isRequired,
+    total: PropType.number.isRequired,
+    positivePercentage:  PropType.number.isRequired,
+}
